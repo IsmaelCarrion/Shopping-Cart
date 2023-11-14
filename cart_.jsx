@@ -157,6 +157,7 @@ const Products = (props) => {
     doFetch(url);
     let newItems = data.map((item) => {
       //let { name, country, cost, instock }  = item;
+      //the definition of the object returned from strapi is different now and cannot be accessed with {name, country, cost, instock}=item, because the structures goes like this: item: {“id”:1,”attributres”:{name:”apples”}}
       let name = item.attributes.name;
       let country = item.attributes.country;
       let cost = item.attributes.cost;
